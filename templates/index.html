@@ -22,11 +22,11 @@
     	</div>
         <h3 style="font-style: italic; color: #5530b4; background-color: #69f4ff; font-size: 24px;">{{ prediction_text }}</h3>
         <!-- File Input -->
-    	<div class="ml-container">
+    	<div class="ml-container" style="padding: 0px; background-color: antiquewhite;">
     		<form action="{{ url_for('predict')}}" method="post">
                 
                 <div class='container-input'>
-                    <div class='label'>Year</div>
+                    <div class='label'>Which year you bought the car?</div>
                     <input id="first" class="input" name="Year" type="number ">
                 </div>
                 <br>
