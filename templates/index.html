@@ -26,26 +26,29 @@
     		<form action="{{ url_for('predict')}}" method="post">
                 
                 <div class='container-input'>
-                    <div class='label'>Which year you bought the car?</div>
-                    <input id="first" class="input" name="Year" type="number ">
+                    <div class='label'>In which year you bought the car?</div>
+                    <input id="first" class="input" name="Year" type="number" placeholder="eg. 2015"
+                    min="0" max="2022" oninput="validity.valid||(value='');" required="required">
                 </div>
                 <br>
                 <div>
-                    <div class='label'>What is the Showroom Price?(In lakhs)</div>
-                    <input id="second" class="input" name="Current_Price" required="required">
+                    <div class='label'>What is the Showroom Price?</div>
+                    <input id="second" class="input" name="Current_Price" required="required", placeholder="eg. 15 Lakh">
                 </div>
                 <br>
                 <div>
-                    <div class='label'>How Many Kilometers Drived?</div><input id="third" class="input" name="Dist_Driven" required="required">
+                    <div class='label'>How Many Kilometers Drived?</div>
+                    <input id="third" class="input" name="Dist_Driven" required="required" placeholder="eg. 4500 KM">
                 </div>
                 <br>
                 <div>
-                    <div class='label'>How much owners previously had the car(0 or 1 or 3) ?</div>
-                    <input id="fourth" class="input" name="Owner" required="required">
+                    <div class='label'>How many owners previously had the car(0 or 1 or 3) ?</div>
+                    <input id="fourth" class="input" name="Owner" required="required" type="number" 
+                    placeholder="eg. 1" min="0" oninput="validity.valid||(value='');">
                 </div>
                 <br>
                 <div>
-                    <div class='label'>What Is the Fuel type?</div>
+                    <div class='label select-label'>What Is the Fuel type?</div>
                     <select name="Fuel_Type_Petrol" class="input" id="fuel" required="required">
                         <option value="Petrol">Petrol</option>
                         <option value="Diesel">Diesel</option>
@@ -54,7 +57,7 @@
                 </div>
                 <br>
                 <div>
-                    <div class='label'>Are you A Dealer or Individual</div>
+                    <div class='label select-label'>Are you A Dealer or Individual</div>
                     <select class="input" name="Seller_Type_Individual" id="resea" required="required">
                         <option value="Dealer">Dealer</option>
                         <option value="Individual">Individual</option>
@@ -62,19 +65,19 @@
                 </div>
                 <br>
                 <div>
-                    <div class='label'>Transmission type</div>
+                    <div class='label select-label'>Transmission type</div>
                     <select class="input" name="Transmission_Mannual" id="research" required="required">
                         <option value="Mannual">Manual Car</option>
                         <option value="Automatic">Automatic Car</option>
                     </select>
                 </div><br>
-                <button id="sub" type="submit" class="my-cta-button">Calculate the Selling Price</button>
+                <button id="sub" type="submit" class="my-cta-button">Get Value</button>
             </form>
             
     	</div>
         <!-- Footer -->
         <div class='footer'>
-            <p class='footer-description'>Build with ♥ by Priti.</p>
+            <p class='footer-description'>Build with ❤️ by Priti.</p>
         </div>
 
     </body>
